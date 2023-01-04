@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model NotSözlü
+
+
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td style="color:darkblue;font-size:20px;"> Birinci Not Değerini Giriniz : </td>
+                    <td>@Html.EditorFor(not1 => not1.Not_1)</td>
+                </tr>
+                <tr>
+                    <td style="color:darkblue;font-size:20px;"> İkinci Not Değerini Giriniz : </td>
+                    <td>@Html.EditorFor(not2 => not2.Not_2)</td>
+                </tr>
+                <tr>
+                    <td style="color:darkblue;font-size:20px;"> Sözlü Notunuzu  Giriniz : </td>
+                    <td>@Html.EditorFor(sözlü => sözlü.Sözlü)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Hesapla" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>@ViewBag.Message</td>
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>
